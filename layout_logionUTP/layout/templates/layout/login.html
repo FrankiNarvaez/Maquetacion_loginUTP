@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{% static 'css/login.css' %}"
+		/>
+		<title>Portal estudiantil</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<script>
+			var imagePlus = '{% static 'images/plus.svg' %}';
+			var imageMinus = '{% static 'images/minus.svg' %}';
+		</script>
+		<script src="{% static 'script/login.js' %}" defer></script>
+		<style>
+			body {
+				background-color: #003d6d;
+				background-image: url("{% static 'images/background.png' %}");
+			}
+		</style>
+	</head>
+	<body>
+		<div class="login-container">
+			<div class="headboard">
+				<div class="logo">
+					<a
+						class="logo-utp"
+						href="https://www.utp.edu.co/"
+						tittle="layout utp"
+					>
+						<img src="{% static 'images/logo_utp.png' %}" alt="logo utp" />
+					</a>
+				</div>
+				<div class="tittle">
+					<h1>PORTAL ESTUDIANTIL</h1>
+				</div>
+				<div class="coat-of-arms">
+					<a
+						class="logo-utp"
+						href="https://www.presidencia.gov.co"
+						tittle="layout utp"
+					>
+						<img
+							src="{% static 'images/escudo_colombia.png' %}"
+							alt="logo utp"
+						/>
+					</a>
+				</div>
+				<div class="blur-headboard"></div>
+			</div>
+			<div class="content">
+				<div class="links">
+					<ul class="utp-li">
+						<li>Historial académico</li>
+						<li>
+							Asignaturas semipresenciales y virtuales para estudiantes UTP
+						</li>
+						<li>Instructivo recuperacion de clave</li>
+					</ul>
+				</div>
+				<div class="body">
+					<div class="login">
+						<p class="p-ingreso">Ingreso Portal : UTP Académico</p>
+						<form id="form">
+							<div class="row row-document">
+								<p>Document</p>
+								<input
+									type="text"
+									id="document"
+									name="document"
+									placeholder="Document"
+								/>
+							</div>
+							<div class="row row-password">
+								<p>Password</p>
+								<input
+									type="password"
+									id="document"
+									name="Password"
+									placeholder="Password"
+								/>
+							</div>
+							<div class="row-center">
+								<a href="#">Olvidó su clave?</a>
+								<p>-</p>
+								<a href="#">Ayuda</a>
+							</div>
+							<div class="row-center">
+								<button class="button button-ingresar" type="button">
+									Ingresar
+								</button>
+								<button class="button button-salir" type="button">Salir</button>
+							</div>
+						</form>
+					</div>
+					<div class="blur-content"></div>
+					<div class="faq-container">
+						<details>
+							<summary>
+								<span class="faq-title"> ¿Cómo ingresar al portal? </span>
+								<img
+									src="{% static 'images/plus.svg' %}"
+									class="expand-icon"
+									alt="Plus"
+								/>
+								{% comment %}
+								<img
+									src="{% static 'images/minus.svg' %}"
+									class="expand-icon"
+									alt="Plus"
+								/>
+								{% endcomment %}
+							</summary>
+							<div class="faq-content">
+								<strong>Si es la primera vez que ingresa</strong>, la clave es
+								su fecha de nacimiento, por favor dig&iacute;tela con el "/" tal
+								y como esta en el ejemplo dd/mm/yyyy), donde:<br />
+								<p align="center">
+									dd = d&iacute;a / mm = mes / yyyy = a&ntilde;o<br />
+									ejemplo: 24/12/1984 (Dia 24, mes 12 , a&ntilde;o 1984).
+								</p>
+								Si al intentar ingresar su fecha de nacimiento no puede
+								ingresar, pruebe colocando en formato mm/dd/yyyy
+								(mes/d&iacute;a/a&ntilde;o).<br />
+								<strong>Nota: </strong>Una vez asignada una clave, su fecha de
+								nacimiento no servir&aacute; como ingreso y deber&aacute;
+								proporcionar la clave adecuada.<br />
+								El portal posee problemas con algunas versiones de Internet
+								Explorer, es mejor que utilice otro navegador<br />
+							</div>
+						</details>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<address>
+					Contacto :
+					<span id="upt-foot-mail"> soporte@utp.edu.co</span>
+				</address>
+				<span id="anno-actualizacion-footer">2022</span> -
+				<a
+					href="http://www.utp.edu.co"
+					title="Universidad Tecnológica de Pereira"
+					target="_blank"
+				>
+					Universidad Tecnol&oacute;gica de Pereira
+				</a>
+				-
+				<span id="desarrollado_por">
+					<b>
+						Gesti&oacute;n de Tecnolog&iacute;as Inform&aacute;ticas y Sistemas
+						de Informaci&oacute;n
+					</b>
+				</span>
+			</div>
+		</div>
+	</body>
+</html>
